@@ -1,4 +1,4 @@
-package main
+package handling_errors
 
 import (
 	"strconv"

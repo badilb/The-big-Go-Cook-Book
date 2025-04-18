@@ -1,11 +1,12 @@
 package main
 
 import (
+	"cookBook/handling_errors"
 	"testing"
 )
 
 func TestParseStringToInt(t *testing.T) {
-	num, err := ParseStringToInt("123456789")
+	num, err := handling_errors.ParseStringToInt("123456789")
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -15,7 +16,7 @@ func TestParseStringToInt(t *testing.T) {
 }
 
 func TestFailParseStringToInt(t *testing.T) {
-	_, err := ParseStringToInt("")
+	_, err := handling_errors.ParseStringToInt("")
 	if err == nil {
 		t.Fatal(err)
 	}
